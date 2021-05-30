@@ -1,0 +1,22 @@
+{% extends "baza.html" %}
+
+{% block content %}
+	<h1>{{tytul}}</h1>
+	<p class="lead">{{tresc}}</p>
+	
+	<table border = 1>
+		<thead>
+			<td>Imię i nazwisko</td>
+			<td>Numer pracownika</td>
+			<td>Adres</td>
+		</thead>
+
+		{% for rekord in rekordy %}
+			<tr>
+				<td>{{rekord["ImieNazwisko"]}}</td>
+				<td>{{rekord["NrPracownika"]}}</td>
+				<td>{{rekord["Adres"]}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
